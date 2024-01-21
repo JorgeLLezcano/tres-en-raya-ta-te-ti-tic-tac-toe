@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background: linear-gradient(
+    170deg,
+    rgba(58, 56, 56, 0.623) 0%,
+    rgb(31, 31, 31) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+h1 {
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.block {
+  border: solid;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 3px;
+}
+.block:hover {
+  background-color: grey;
+}
+
+.btnReincio {
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.popUp {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  flex-direction: column;
+  color: black;
+  border: solid;
+  animation: slide-in-top 0.3s ease-in-out;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
